@@ -1,14 +1,42 @@
 #created my custom error in case of giving invalid inputs
-class NotValidInputError(ValueError):
-    def __init__(self,value,value2) -> str:
-        super().__init__(f"Your input == {value} or {value2} is not valid, please check!")
+class CustomError(ValueError):
+    def __init__(self) -> str:
+        super().__init__(f"Inputs are not valid since task was to add only numbers not strings!")
+
 
 class addNumbers:
-    def addNums(x,n):
-        if x or n <0:
-            raise NotValidInputError(x,n)
+    def __init__(self):
+        self.result=[]
+
+    #main function
+    def addNums(self,x,n):
+        if isinstance(x,int) and isinstance(n,int):
+            result = n + x
+            self.result.append(result)
+            return result
         else:
-            return x+n
+            raise CustomError()
+
+    #getting last/recent result result
+    def recent_result(self):
+        return self.result
+
+    #resetting last result
+    def clean_result(self):
+        self.result = []
+        return 'Cleaned!'   
     
 
-print(addNumbers.addNums(-2,2))
+myClass=addNumbers()
+
+print(myClass.addNums(55,4))
+print(f'Recent result: {myClass.recent_result()}')
+
+print(myClass.addNums(323,4))
+print(f'Recent results: {myClass.recent_result()}')
+print(f'History is {myClass.clean_result()}')
+
+
+
+
+

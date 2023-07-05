@@ -1,0 +1,6 @@
+pytest==7.4.0
+robotframework==5.0.1
+robotframework-pythonlibcore==4.1.2
+robotframework-seleniumlibrary==6.1.0
+selenium==4.9.0
+
