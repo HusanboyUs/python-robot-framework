@@ -31,4 +31,9 @@ pytest tests.py -v
 robot config.robot
 ```
 ### Output or logs files are not visible since they are added to gitignore, please remove them if you want to open these files
+### References
+[Python](https://www.python.org/)
+[Pytest](https://docs.pytest.org/en/7.4.x/)
+[Robot Framework](https://robotframework.org/)
+
 
