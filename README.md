@@ -1,6 +1,6 @@
 # Getting started 
 
-## Fork the repository from Github using: :
+## Fork the repository from Github using: 
 
 ```
 git@github.com:HusanboyUs/python-robot-framework.git
@@ -25,7 +25,7 @@ pytest tests.py -v
 ```
 #Running robot Framework 
 
-## Go to Robot folder and run the config.robot file  : :
+## Go to Robot folder and run the config.robot file  : 
 
 ```
 robot config.robot
